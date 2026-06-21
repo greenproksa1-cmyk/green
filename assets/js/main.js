@@ -37,13 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Loading Screen ---
   const loader = document.getElementById('loader');
   if (loader) {
-    // Force a visual delay of 1.8 seconds to display the premium animation
+    // 1.8s display then fade out
     setTimeout(() => {
       loader.classList.add('fade-out');
       setTimeout(() => {
         loader.style.display = 'none';
-        // Trigger reveal animations on load
         document.body.classList.add('loaded');
+        // Start counters AFTER loader is fully hidden (above-the-fold stats)
+        startCounters();
       }, 600);
     }, 1800);
   }
@@ -197,31 +198,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Numeric Counters Animation ---
+  // --- Numeric Counters Animation (RAF easing, ~2.5s duration) ---
   let countersStarted = false;
   function startCounters() {
     if (countersStarted) return;
     countersStarted = true;
-    
+
     const counters = document.querySelectorAll('.counter-num');
+    const DURATION = 2500; // ms — clearly visible counting animation
+
     counters.forEach(counter => {
       const target = +counter.getAttribute('data-target');
-      const duration = 2000;
-      const stepTime = Math.max(Math.floor(duration / target), 15);
-      let current = 0;
-      
-      const timer = setInterval(() => {
-        current += Math.ceil(target / 100); // Dynamic step based on size
-        if (current >= target) {
-          current = target;
+      const startTime = performance.now();
+
+      function easeOut(t) {
+        // Cubic ease-out: starts fast, decelerates at the end
+        return 1 - Math.pow(1 - t, 3);
+      }
+
+      function tick(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / DURATION, 1);
+        const easedProgress = easeOut(progress);
+        const current = Math.round(easedProgress * target);
+
+        if (progress < 1) {
+          counter.textContent = current;
+          requestAnimationFrame(tick);
+        } else {
           counter.classList.add('completed');
           const suffix = counter.getAttribute(`data-${currentLang}-suffix`) || '';
           counter.textContent = target + suffix;
-          clearInterval(timer);
-        } else {
-          counter.textContent = current;
         }
-      }, stepTime);
+      }
+
+      requestAnimationFrame(tick);
     });
   }
 
