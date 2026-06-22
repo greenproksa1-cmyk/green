@@ -184,6 +184,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Re-render portfolio projects with correct language
     renderPortfolio(currentFilter);
+
+    // Dispatch custom event for language changes
+    document.dispatchEvent(new CustomEvent('langChanged', { detail: { lang } }));
   }
 
   function updateStatsText(lang) {

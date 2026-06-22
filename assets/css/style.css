@@ -3021,3 +3021,65 @@ html {
     font-size: 0.8rem;
   }
 }
+
+/* --- Archive Teaser Banner in Portfolio --- */
+.archive-teaser-banner {
+  margin-top: 50px;
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, #1a5c3c 100%);
+  border-radius: 16px;
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid rgba(212, 180, 106, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.archive-teaser-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(201, 162, 75, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.archive-teaser-content {
+  position: relative;
+  z-index: 1;
+}
+
+.archive-teaser-title {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.archive-teaser-desc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  max-width: 600px;
+}
+
+.archive-teaser-banner .btn {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .archive-teaser-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 24px;
+    gap: 20px;
+  }
+  
+  .archive-teaser-desc {
+    max-width: 100%;
+  }
+}
+

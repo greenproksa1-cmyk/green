@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-ar="أرشيف معارضنا | قرين بروجكتس" data-en="Exhibition Archive | Green Projects">أرشيف معارضنا | قرين بروجكتس</title>
+
+  <!-- Meta Tags for SEO -->
+  <meta name="description" data-ar="أرشيف شامل لجميع المعارض والفعاليات التي نفّذتها قرين بروجكتس — سجل متكامل من الأجنحة والمؤتمرات والفعاليات الحكومية." data-en="A comprehensive archive of all exhibitions and events executed by Green Projects — a complete record of pavilions, conferences, and government events." content="أرشيف شامل لجميع المعارض والفعاليات التي نفّذتها قرين بروجكتس — سجل متكامل من الأجنحة والمؤتمرات والفعاليات الحكومية.">
+  <meta name="keywords" content="معارض قرين بروجكتس, أرشيف المعارض, أجنحة السعودية, Green Projects exhibitions, Saudi exhibition archive, booth design Riyadh">
+  <meta name="author" content="Green Projects Company">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="أرشيف معارضنا | قرين بروجكتس">
+  <meta property="og:description" content="سجل متكامل لمعارض ومؤتمرات نفّذتها قرين بروجكتس عبر السنوات.">
+  <meta property="og:image" content="assets/images/logo.png">
+
+  <!-- Stylesheets -->
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* =====================================================
+       Exhibitions Archive Page — Scoped Styles
+       ===================================================== */
+
+    /* ---- Page Hero ---- */
+    .exhibitions-hero {
+      min-height: 52vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background-image: url('assets/images/hero-bg.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      padding-top: 130px;
+      padding-bottom: 80px;
+      overflow: hidden;
+    }
+
+    .exhibitions-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(14,59,42,0.97) 0%, rgba(10,40,29,0.93) 55%, rgba(5,20,15,0.88) 100%);
+      z-index: 1;
+    }
+
+    /* Animated background dots */
+    .exhibitions-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(201,162,75,0.12) 1px, transparent 1px);
+      background-size: 32px 32px;
+      z-index: 1;
+      animation: heroDotsShift 20s linear infinite;
+    }
+
+    @keyframes heroDotsShift {
+      0%   { background-position: 0 0; }
+      100% { background-position: 32px 32px; }
+    }
+
+    .exhibitions-hero .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .exh-hero-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-gold);
+      border: 1px solid rgba(212,180,106,0.35);
+      background: rgba(212,180,106,0.08);
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 22px;
+    }
+
+    .exh-hero-title {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      letter-spacing: -1px;
+    }
+
+    .exh-hero-title span {
+      display: block;
+      font-size: 0.55em;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--color-gold);
+      margin-top: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .exh-hero-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 620px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+    }
+
+    .exh-hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 30px;
+      margin-top: 10px;
+    }
+
+    .exh-hero-stat {
+      text-align: center;
+    }
+
+    .exh-hero-stat-num {
+      display: block;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--color-gold);
+      font-family: var(--font-en-title);
+      line-height: 1;
+    }
+
+    .exh-hero-stat-label {
+      display: block;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 5px;
+    }
+
+    /* Wave divider (inherited from global) */
+    .exh-hero-wave {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .exh-hero-wave svg {
+      display: block;
+      width: 100%;
+      height: 55px;
+    }
+
+    /* ---- Archive Main Section ---- */
+    .archive-section {
+      background-color: var(--color-light-bg-1);
+      padding: 80px 0 100px;
+    }
+
+    /* ---- Search & Filter Bar ---- */
+    .archive-controls {
+      background: #fff;
+      border-radius: var(--border-radius-md);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+      padding: 28px 30px;
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border: 1px solid rgba(14,59,42,0.07);
+    }
+
+    .archive-controls-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* Search Input */
+    .archive-search-wrap {
+      flex: 1;
+      min-width: 220px;
+      position: relative;
+    }
+
+    .archive-search-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      inset-inline-start: 16px;
+      color: var(--color-gray-text);
+      pointer-events: none;
+    }
+
+    .archive-search-input {
+      width: 100%;
+      padding: 13px 16px 13px 48px;
+      border: 1.5px solid rgba(14,59,42,0.15);
+      border-radius: var(--border-radius-sm);
+      font-size: 0.95rem;
+      background: var(--color-light-bg-1);
+      color: var(--color-navy);
+      transition: var(--transition-fast);
+      font-family: inherit;
+      outline: none;
+    }
+
+    html[dir="rtl"] .archive-search-input {
+      padding: 13px 48px 13px 16px;
+    }
+
+    html[dir="rtl"] .archive-search-icon {
+      inset-inline-start: auto;
+      inset-inline-end: 16px;
+    }
+
+    .archive-search-input:focus {
+      border-color: var(--color-brand);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(30,122,76,0.1);
+    }
+
+    .archive-search-input::placeholder {
+      color: #aaa;
+    }
+
+    /* Year Filter Buttons */
+    .year-filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .year-btn {
+      padding: 9px 20px;
+      border-radius: 50px;
+      border: 1.5px solid rgba(14,59,42,0.2);
+      background: transparent;
+      color: var(--color-gray-text);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      font-family: inherit;
+    }
+
+    .year-btn:hover {
+      border-color: var(--color-brand);
+      color: var(--color-brand);
+      background: rgba(30,122,76,0.05);
+    }
+
+    .year-btn.active {
+      background: var(--color-primary-dark);
+      border-color: var(--color-primary-dark);
+      color: #fff;
+    }
+
+    /* Results Count */
+    .archive-results-count {
+      font-size: 0.88rem;
+      color: var(--color-gray-text);
+      font-weight: 500;
+    }
+
+    .archive-results-count strong {
+      color: var(--color-brand);
+    }
+
+    /* ---- Cards Grid ---- */
+    #exhibitions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 32px;
+    }
+
+    /* ---- Exhibition Card ---- */
+    .exh-card {
+      background: #fff;
+      border-radius: var(--border-radius-md);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid rgba(14,59,42,0.07);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .exh-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+      border-color: rgba(14,59,42,0.15);
+    }
+
+    /* Card image wrapper — 16:9 ratio */
+    .exh-card-img-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      overflow: hidden;
+      background: var(--color-primary-dark);
+    }
+
+    /* Skeleton Loader */
+    .exh-card-img-wrap .img-skeleton {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+      z-index: 1;
+    }
+
+    @keyframes shimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    .exh-card-img-wrap img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .exh-card-img-wrap img.loaded {
+      opacity: 1;
+    }
+
+    .exh-card:hover .exh-card-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    /* Year Badge */
+    .exh-year-badge {
+      position: absolute;
+      top: 14px;
+      inset-inline-start: 14px;
+      background: linear-gradient(135deg, var(--color-gold) 0%, #B88E3C 100%);
+      color: var(--color-primary-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 50px;
+      z-index: 3;
+      letter-spacing: 0.5px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Image overlay gradient */
+    .exh-card-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(14,59,42,0.65) 0%, transparent 55%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* Card Body */
+    .exh-card-body {
+      padding: 24px 24px 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .exh-card-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--color-navy);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .exh-card-organizer {
+      font-size: 0.87rem;
+      color: var(--color-gray-text);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .exh-card-location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: var(--color-brand);
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+    .exh-card-location svg {
+      flex-shrink: 0;
+      color: var(--color-brand);
+    }
+
+    .exh-card-desc {
+      font-size: 0.88rem;
+      color: var(--color-gray-text);
+      line-height: 1.65;
+      flex: 1;
+      /* Clamp to 3 lines */
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Card Footer — Action Buttons */
+    .exh-card-footer {
+      padding: 18px 24px 24px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(14,59,42,0.07);
+      margin-top: 18px;
+    }
+
+    .exh-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 18px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      border-radius: var(--border-radius-sm);
+      cursor: pointer;
+      transition: var(--transition-fast);
+      text-decoration: none;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+
+    .exh-btn-website {
+      background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-primary-dark) 100%);
+      color: #fff;
+      border: none;
+    }
+
+    .exh-btn-website:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+      filter: brightness(1.1);
+    }
+
+    .exh-btn-pdf {
+      background: transparent;
+      color: var(--color-primary-dark);
+      border: 1.5px solid rgba(14,59,42,0.3);
+    }
+
+    .exh-btn-pdf:hover {
+      background: var(--color-primary-dark);
+      color: #fff;
+      border-color: var(--color-primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ---- Empty State ---- */
+    #exh-empty-state {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      grid-column: 1 / -1;
+    }
+
+    #exh-empty-state.visible {
+      display: flex;
+    }
+
+    .exh-empty-icon {
+      width: 80px;
+      height: 80px;
+      background: rgba(14,59,42,0.06);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .exh-empty-icon svg {
+      color: var(--color-brand);
+      opacity: 0.5;
+    }
+
+    .exh-empty-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-navy);
+      margin-bottom: 10px;
+    }
+
+    .exh-empty-text {
+      font-size: 0.95rem;
+      color: var(--color-gray-text);
+      max-width: 350px;
+    }
+
+    /* ---- Archive Banner (Back to Main) ---- */
+    .archive-back-banner {
+      margin-top: 70px;
+      background: linear-gradient(135deg, var(--color-primary-dark) 0%, #1a5c3c 100%);
+      border-radius: var(--border-radius-md);
+      padding: 50px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .archive-back-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(201,162,75,0.1) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+    }
+
+    .archive-back-banner-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .archive-back-banner-text h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .archive-back-banner-text p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 420px;
+    }
+
+    .archive-back-banner .btn {
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
+    }
+
+    /* ---- Mobile ---- */
+    @media (max-width: 900px) {
+      #exhibitions-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      #exhibitions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .archive-controls-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .archive-search-wrap {
+        min-width: unset;
+      }
+
+      .exh-hero-stats {
+        gap: 24px;
+      }
+
+      .archive-back-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 36px 24px;
+      }
+
+      .exh-card-footer {
+        flex-direction: column;
+      }
+
+      .exh-btn {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body class="lang-ar">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-logo-wrapper">
+      <img src="assets/images/logo.png" alt="Green Projects Company" class="loader-logo-official">
+    </div>
+  </div>
+
+  <!-- ==============================
+       Header / Navbar (identical to index.html)
+       ============================== -->
+  <header>
+    <div class="container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="logo-official-link" aria-label="قرين بروجكتس — العودة للرئيسية" style="cursor:pointer;">
+        <img src="assets/images/logo.png" alt="Green Projects Company | قرين بروجيكتس" class="logo-official">
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <a href="index.html#hero" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="index.html#about" data-ar="من نحن" data-en="About Us">من نحن</a>
+        <a href="index.html#services" data-ar="خدماتنا" data-en="Our Services">خدماتنا</a>
+        <a href="index.html#methodology" data-ar="منهجية العمل" data-en="Methodology">منهجية العمل</a>
+        <a href="index.html#sectors" data-ar="قطاعاتنا" data-en="Our Sectors">قطاعاتنا</a>
+        <a href="index.html#portfolio" data-ar="أعمالنا" data-en="Portfolio">أعمالنا</a>
+        <a href="exhibitions.html" class="nav-active" data-ar="معارضنا السابقة" data-en="Past Exhibitions">معارضنا السابقة</a>
+        <a href="index.html#why-us" data-ar="لماذا نحن" data-en="Why Us">لماذا نحن</a>
+        <a href="index.html#contact" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a>
+      </nav>
+
+      <!-- Language & CTA actions -->
+      <div class="nav-actions">
+        <button id="lang-toggle" class="lang-btn">English</button>
+        <a href="index.html#contact" class="btn btn-gold" data-ar="احجز استشارتك" data-en="Book Consultation">احجز استشارتك</a>
+
+        <!-- Mobile burger -->
+        <div class="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==============================
+       Hero Section
+       ============================== -->
+  <section class="exhibitions-hero" id="exh-hero">
+    <div class="container">
+      <div class="reveal-element">
+        <div class="exh-hero-tag" data-ar="الأرشيف المؤسسي" data-en="Institutional Archive">الأرشيف المؤسسي</div>
+        <h1 class="exh-hero-title">
+          <span data-ar="أرشيف معارضنا" data-en="Exhibition Archive">أرشيف معارضنا</span>
+          <span data-ar="Exhibition Archive" data-en="أرشيف معارضنا">Exhibition Archive</span>
+        </h1>
+        <p class="exh-hero-subtitle" data-ar="سجل متكامل لمعارض ومؤتمرات ناجحة نفّذتها قرين بروجكتس عبر السنوات — شاهد كيف نحوّل الرؤى إلى واقع مبهر." data-en="A complete record of successful exhibitions and conferences executed by Green Projects over the years — see how we turn visions into stunning realities.">
+          سجل متكامل لمعارض ومؤتمرات ناجحة نفّذتها قرين بروجكتس عبر السنوات — شاهد كيف نحوّل الرؤى إلى واقع مبهر.
+        </p>
+
+        <div class="exh-hero-stats">
+          <div class="exh-hero-stat">
+            <span class="exh-hero-stat-num" id="stat-total">0</span>
+            <span class="exh-hero-stat-label" data-ar="معرض مؤرشف" data-en="Archived Exhibitions">معرض مؤرشف</span>
+          </div>
+          <div class="exh-hero-stat">
+            <span class="exh-hero-stat-num">9+</span>
+            <span class="exh-hero-stat-label" data-ar="سنوات من الخبرة" data-en="Years of Experience">سنوات من الخبرة</span>
+          </div>
+          <div class="exh-hero-stat">
+            <span class="exh-hero-stat-num">120+</span>
+            <span class="exh-hero-stat-label" data-ar="عميل وشريك استراتيجي" data-en="Trusted Partners">عميل وشريك استراتيجي</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wave Divider -->
+    <div class="exh-hero-wave">
+      <svg viewBox="0 0 1440 55" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,22L120,30C240,38,480,54,720,54.5C960,54,1200,38,1320,30L1440,22L1440,55L1320,55C1200,55,960,55,720,55C480,55,240,55,120,55L0,55Z" fill="#F7F9F7"/>
+        <path d="M0,32L120,36C240,40,480,48,720,47.5C960,48,1200,40,1320,36L1440,32" stroke="#C9A24B" stroke-width="1.5"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==============================
+       Archive Main Section
+       ============================== -->
+  <section class="archive-section">
+    <div class="container">
+
+      <!-- Controls: Search + Year Filters -->
+      <div class="archive-controls reveal-element">
+        <div class="archive-controls-row">
+          <!-- Search Input -->
+          <div class="archive-search-wrap">
+            <svg class="archive-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              type="text"
+              id="exh-search"
+              class="archive-search-input"
+              placeholder="ابحث باسم المعرض أو الجهة المنظمة..."
+              data-ar-placeholder="ابحث باسم المعرض أو الجهة المنظمة..."
+              data-en-placeholder="Search by exhibition name or organizer..."
+              autocomplete="off"
+            >
+          </div>
+
+          <!-- Results count -->
+          <div class="archive-results-count" id="exh-results-count" aria-live="polite">
+            <span data-ar="إجمالي النتائج: " data-en="Results: ">إجمالي النتائج: </span>
+            <strong id="exh-count-num">0</strong>
+          </div>
+        </div>
+
+        <!-- Year Filter Row -->
+        <div class="archive-controls-row">
+          <div class="year-filters" id="year-filters" role="group" aria-label="تصفية بالسنة">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Exhibitions Grid -->
+      <div id="exhibitions-grid" role="list" aria-label="قائمة المعارض">
+        <!-- Dynamically rendered -->
+      </div>
+
+      <!-- Empty State (hidden by default) -->
+      <div id="exh-empty-state" role="status">
+        <div class="exh-empty-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <line x1="8" y1="11" x2="14" y2="11"></line>
+          </svg>
+        </div>
+        <h3 class="exh-empty-title" data-ar="لا توجد نتائج مطابقة" data-en="No Matching Results">لا توجد نتائج مطابقة</h3>
+        <p class="exh-empty-text" data-ar="جرّب كلمة بحث مختلفة أو اختر سنة أخرى من الفلاتر." data-en="Try a different search term or select another year from the filters.">
+          جرّب كلمة بحث مختلفة أو اختر سنة أخرى من الفلاتر.
+        </p>
+      </div>
+
+      <!-- Back to Main Page Banner -->
+      <div class="archive-back-banner reveal-element">
+        <div class="archive-back-banner-text">
+          <h3 data-ar="هل تبحث عن خدماتنا الكاملة؟" data-en="Looking for our full services?">هل تبحث عن خدماتنا الكاملة؟</h3>
+          <p data-ar="تفضّل بزيارة صفحتنا الرئيسية لاكتشاف باقة خدماتنا المتكاملة أو للتواصل مباشرة مع فريقنا." data-en="Visit our main page to explore our full service portfolio or to connect directly with our team.">
+            تفضّل بزيارة صفحتنا الرئيسية لاكتشاف باقة خدماتنا المتكاملة أو للتواصل مباشرة مع فريقنا.
+          </p>
+        </div>
+        <a href="index.html#contact" class="btn btn-gold" data-ar="احجز استشارة مجانية" data-en="Book Free Consultation">احجز استشارة مجانية</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================
+       Footer (identical to index.html)
+       ============================== -->
+  <footer>
+    <!-- Wave Gold Divider top -->
+    <div class="wave-divider top">
+      <svg viewBox="0 0 1440 74" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,74L1320,74C1200,74,960,74,720,74C480,74,240,74,120,74L0,74Z" fill="#0E3B2A"/>
+        <path d="M0,45L120,50C240,55,480,65,720,64.5C960,65,1200,55,1320,50L1440,45" stroke="#C9A24B" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Box -->
+        <div class="footer-about">
+          <a href="index.html" class="logo-official-link">
+            <img src="assets/images/logo.png" alt="Green Projects Company | قرين بروجيكتس" class="logo-official footer-logo">
+          </a>
+          <p data-ar="نصنع فعاليات استثنائية ونبدع في هندسة التجارب وتصميم أجنحة المعارض بهوية بصرية مبتكرة وإشراف هندسي كامل، ملتزمون بدقة التوقيت وفخامة التشغيل تماشياً مع رؤية 2030." data-en="Designing state-of-the-art events and engineering corporate experiences. Dedicated to rigorous execution and premium operations representing the Saudi Vision 2030.">
+            نصنع فعاليات استثنائية ونبدع في هندسة التجارب وتصميم أجنحة المعارض بهوية بصرية مبتكرة وإشراف هندسي كامل، ملتزمون بدقة التوقيت وفخامة التشغيل تماشياً مع رؤية 2030.
+          </p>
+          <div class="footer-socials">
+            <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://x.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.75zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links-box">
+          <h3 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h3>
+          <ul class="footer-links">
+            <li><a href="index.html#hero" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+            <li><a href="index.html#about" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+            <li><a href="index.html#services" data-ar="خدماتنا" data-en="Our Services">خدماتنا</a></li>
+            <li><a href="index.html#methodology" data-ar="منهجية العمل" data-en="Methodology">منهجية العمل</a></li>
+            <li><a href="index.html#sectors" data-ar="قطاعاتنا" data-en="Our Sectors">قطاعاتنا</a></li>
+            <li><a href="index.html#portfolio" data-ar="أعمالنا" data-en="Portfolio">أعمالنا</a></li>
+            <li><a href="exhibitions.html" data-ar="معارضنا السابقة" data-en="Past Exhibitions">معارضنا السابقة</a></li>
+            <li><a href="index.html#why-us" data-ar="لماذا نحن" data-en="Why Us">لماذا نحن</a></li>
+            <li><a href="index.html#contact" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="footer-contact-box">
+          <h3 data-ar="بيانات الاتصال" data-en="Contact Info">بيانات الاتصال</h3>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span style="direction:ltr;unicode-bidi:isolate;">0590401777</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>contact@gren-pro.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span data-ar="الرياض، حي المعذر الشمالي" data-en="Riyadh, Al Mathar Al Shamali District">
+                الرياض، حي المعذر الشمالي
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="copyright" data-ar="&copy; 2026 شركة قرين بروجكتس المحدودة — جميع الحقوق محفوظة." data-en="&copy; 2026 Green Projects Company Ltd. — All rights reserved.">
+          &copy; 2026 شركة قرين بروجكتس المحدودة — جميع الحقوق محفوظة.
+        </div>
+        <div class="footer-policy-links">
+          <a href="#" data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a>
+          <a href="#" data-ar="شروط الخدمة" data-en="Terms of Service">شروط الخدمة</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/966590401777" class="whatsapp-float clickable" target="_blank" aria-label="WhatsApp Support">
+    <svg width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
+      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.949h.004c4.368 0 7.927-3.558 7.93-7.93a7.828 7.828 0 0 0-2.33-5.693zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.69-4.98c-.202-.101-1.2-.593-1.385-.658-.186-.067-.322-.101-.457.101-.136.2-.524.659-.643.795-.12.136-.239.153-.441.052-.2-.101-.845-.312-1.61-.994-.596-.532-.998-1.192-1.115-1.392-.119-.201-.013-.31.088-.41.09-.09.2-.21.3-.316.1-.106.133-.18.2-.3.067-.122.033-.227-.018-.328-.051-.101-.457-1.1-.625-1.504-.165-.4-.347-.346-.477-.353-.122-.007-.262-.007-.402-.007a.891.891 0 0 0-.646.3c-.22.241-.84.821-.84 2.003 0 1.184.862 2.325.982 2.485.12.16 1.696 2.592 4.109 3.633.573.248 1.02.396 1.369.507.576.184 1.1.158 1.517.097.464-.069 1.2-.491 1.37-1.001.17-.508.17-.943.119-1.001-.051-.059-.186-.092-.388-.193z"/>
+    </svg>
+  </a>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ==============================
+       JavaScript
+       ============================== -->
+  <!-- Shared main.js for header scroll, cursor, lang toggle, loader, etc. -->
+  <script src="assets/js/exhibitions-data.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Exhibitions Page Logic -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---- State ---- */
+      let currentYear   = 'all';
+      let currentSearch = '';
+      const archive     = window.exhibitionsArchive || [];
+
+      /* ---- DOM refs ---- */
+      const grid        = document.getElementById('exhibitions-grid');
+      const emptyState  = document.getElementById('exh-empty-state');
+      const searchInput = document.getElementById('exh-search');
+      const countEl     = document.getElementById('exh-count-num');
+      const totalEl     = document.getElementById('stat-total');
+      const yearFilters = document.getElementById('year-filters');
+
+      /* ---- Update hero stat counter ---- */
+      if (totalEl) totalEl.textContent = archive.length;
+
+      /* ---- Derive unique years from data ---- */
+      function buildYearFilters() {
+        const years = [...new Set(archive.map(e => e.year).filter(Boolean))].sort().reverse();
+
+        const isAr   = document.documentElement.dir === 'rtl';
+        const allTxt = isAr ? 'الكل' : 'All';
+
+        yearFilters.innerHTML = '';
+
+        const allBtn = document.createElement('button');
+        allBtn.className = 'year-btn active';
+        allBtn.dataset.year = 'all';
+        allBtn.dataset.ar = 'الكل';
+        allBtn.dataset.en = 'All';
+        allBtn.textContent = allTxt;
+        allBtn.setAttribute('aria-pressed', 'true');
+        yearFilters.appendChild(allBtn);
+
+        years.forEach(y => {
+          const btn = document.createElement('button');
+          btn.className = 'year-btn';
+          btn.dataset.year = y;
+          btn.textContent = y;
+          btn.setAttribute('aria-pressed', 'false');
+          yearFilters.appendChild(btn);
+        });
+
+        yearFilters.addEventListener('click', e => {
+          const btn = e.target.closest('.year-btn');
+          if (!btn) return;
+          yearFilters.querySelectorAll('.year-btn').forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-pressed', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-pressed', 'true');
+          currentYear = btn.dataset.year;
+          renderCards();
+        });
+      }
+
+      /* ---- Filter logic ---- */
+      function getFiltered() {
+        const lang  = document.documentElement.dir === 'rtl' ? 'ar' : 'en';
+        const query = currentSearch.trim().toLowerCase();
+
+        return archive.filter(ex => {
+          // Year filter
+          if (currentYear !== 'all' && ex.year !== currentYear) return false;
+
+          // Text search
+          if (query) {
+            const title     = (ex.title?.[lang]     || '').toLowerCase();
+            const organizer = (ex.organizer?.[lang]  || '').toLowerCase();
+            const location  = (ex.location?.[lang]   || '').toLowerCase();
+            const desc      = (ex.description?.[lang] || '').toLowerCase();
+            if (!title.includes(query) && !organizer.includes(query) && !location.includes(query) && !desc.includes(query)) return false;
+          }
+
+          return true;
+        });
+      }
+
+      /* ---- Build a single card ---- */
+      function buildCard(ex) {
+        const lang = document.documentElement.dir === 'rtl' ? 'ar' : 'en';
+
+        const title     = ex.title?.[lang]       || '';
+        const organizer = ex.organizer?.[lang]   || '';
+        const location  = ex.location?.[lang]    || '';
+        const desc      = ex.description?.[lang] || '';
+        const year      = ex.year                || '';
+        const img       = ex.coverImage          || '';
+        const website   = ex.websiteUrl          || '';
+        const pdf       = ex.profilePdfUrl       || '';
+
+        // Action buttons HTML (only when URL is non-empty)
+        let buttonsHtml = '';
+        if (website) {
+          const label = lang === 'ar' ? 'الموقع الرسمي' : 'Official Website';
+          buttonsHtml += `
+            <a href="${website}" class="exh-btn exh-btn-website" target="_blank" rel="noopener noreferrer" aria-label="${label}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              ${label}
+            </a>`;
+        }
+        if (pdf) {
+          const label = lang === 'ar' ? 'تحميل البروفايل' : 'Download Profile';
+          buttonsHtml += `
+            <a href="${pdf}" class="exh-btn exh-btn-pdf" target="_blank" rel="noopener noreferrer" download aria-label="${label}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+              </svg>
+              ${label}
+            </a>`;
+        }
+
+        const footerHtml = buttonsHtml
+          ? `<div class="exh-card-footer">${buttonsHtml}</div>`
+          : '';
+
+        const locationHtml = location
+          ? `<div class="exh-card-location">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>${location}</span>
+            </div>`
+          : '';
+
+        const card = document.createElement('article');
+        card.className = 'exh-card reveal-element';
+        card.setAttribute('role', 'listitem');
+        card.innerHTML = `
+          <div class="exh-card-img-wrap">
+            <div class="img-skeleton"></div>
+            ${year ? `<span class="exh-year-badge">${year}</span>` : ''}
+            <div class="exh-card-img-overlay"></div>
+            ${img ? `<img src="${img}" alt="${title}" loading="lazy" decoding="async">` : ''}
+          </div>
+          <div class="exh-card-body">
+            <h2 class="exh-card-title">${title}</h2>
+            <p class="exh-card-organizer">${organizer}</p>
+            ${locationHtml}
+            ${desc ? `<p class="exh-card-desc">${desc}</p>` : ''}
+          </div>
+          ${footerHtml}
+        `;
+
+        // Skeleton → image loaded
+        const imgEl = card.querySelector('.exh-card-img-wrap img');
+        const skelEl = card.querySelector('.img-skeleton');
+        if (imgEl) {
+          imgEl.addEventListener('load', () => {
+            imgEl.classList.add('loaded');
+            if (skelEl) skelEl.style.display = 'none';
+          });
+          imgEl.addEventListener('error', () => {
+            if (skelEl) skelEl.style.background = 'rgba(14,59,42,0.1)';
+            imgEl.style.display = 'none';
+          });
+        }
+
+        return card;
+      }
+
+      /* ---- Render cards ---- */
+      function renderCards() {
+        const filtered = getFiltered();
+
+        // Clear existing cards (keep empty state node inside grid)
+        Array.from(grid.children).forEach(c => {
+          if (c.id !== 'exh-empty-state') grid.removeChild(c);
+        });
+
+        if (filtered.length === 0) {
+          emptyState.classList.add('visible');
+          // Move empty state into grid
+          grid.appendChild(emptyState);
+        } else {
+          emptyState.classList.remove('visible');
+
+          const fragment = document.createDocumentFragment();
+          filtered.forEach(ex => {
+            const card = buildCard(ex);
+            fragment.appendChild(card);
+          });
+          grid.appendChild(fragment);
+
+          // Trigger reveal animations for new cards
+          requestAnimationFrame(() => {
+            grid.querySelectorAll('.exh-card.reveal-element').forEach((el, i) => {
+              setTimeout(() => {
+                el.classList.add('revealed');
+              }, i * 80);
+            });
+          });
+        }
+
+        // Update count
+        if (countEl) countEl.textContent = filtered.length;
+      }
+
+      /* ---- Search debounce ---- */
+      let searchTimer;
+      searchInput.addEventListener('input', () => {
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(() => {
+          currentSearch = searchInput.value;
+          renderCards();
+        }, 220);
+      });
+
+      /* ---- Re-render on language change ---- */
+      document.addEventListener('langChanged', () => {
+        // Update year filter labels
+        yearFilters.querySelectorAll('.year-btn').forEach(btn => {
+          const ar = btn.dataset.ar;
+          const en = btn.dataset.en;
+          const lang = document.documentElement.dir === 'rtl' ? 'ar' : 'en';
+          if (ar && en) btn.textContent = lang === 'ar' ? ar : en;
+        });
+
+        // Update search placeholder
+        const lang = document.documentElement.dir === 'rtl' ? 'ar' : 'en';
+        const ph = searchInput.dataset[lang + 'Placeholder'];
+        if (ph) searchInput.placeholder = ph;
+
+        renderCards();
+      });
+
+      /* ---- Init ---- */
+      buildYearFilters();
+      renderCards();
+
+      /* ---- Active nav link style ---- */
+      const style = document.createElement('style');
+      style.textContent = `
+        .nav-active {
+          color: var(--color-gold) !important;
+        }
+        .nav-active::after {
+          width: 100% !important;
+          background-color: var(--color-gold) !important;
+        }
+      `;
+      document.head.appendChild(style);
+
+    })();
+  </script>
+</body>
+</html>
