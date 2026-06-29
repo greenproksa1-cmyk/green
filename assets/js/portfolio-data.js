@@ -393,8 +393,12 @@ const portfolioData = [
   {
     "id": 23,
     "title": {
-      "ar": "لقطة من أعمالنا",
-      "en": "From Our Portfolio"
+      "ar": "معرض نيوم الدولي للبناء",
+      "en": "NEOM International Construction Exhibition"
+    },
+    "client": {
+      "ar": "جناح شركة اسمنت المدينة",
+      "en": "City Cement Company Pavilion"
     },
     "category": {
       "ar": "مؤتمرات",
