@@ -75,8 +75,8 @@ const portfolioData = [
       ar: "إدارة ميدانية كاملة لمنصة العرض الرئيسية لمؤتمر تطوير عمراني، شملت إدارة الجلسات الحوارية، أنظمة العرض المرئي بشاشات LED عملاقة، وتنسيق جلوس الحضور.",
       en: "Full on-site management of the main presentation stage for an urban development conference, including panel session management, giant LED visual display systems, and audience seating coordination."
     },
-    profilePdfUrl: "#",
-    externalWebsiteUrl: "#"
+    // profilePdfUrl: "#",
+    // externalWebsiteUrl: "#"
   },
   {
     title: {
