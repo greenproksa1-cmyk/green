@@ -80,6 +80,29 @@ const portfolioData = [
   },
   {
     title: {
+      ar: "تصميم ثلاثي الأبعاد لجناح \"ضمان\"",
+      en: "\"Daman\" Pavilion — 3D Concept Design"
+    },
+    client: {
+      ar: "ضمان",
+      en: "Daman"
+    },
+    category: { ar: "تصميم وهندسة", en: "Design & Engineering" },
+    categoryKey: "design",
+    year: "2025",
+    coverImage: "assets/images/portfolio/daman-3d-design.jpg",
+    gallery: [
+      "assets/images/portfolio/daman-3d-design.jpg"
+    ],
+    description: {
+      ar: "تصميم هندسي ثلاثي الأبعاد متكامل لجناح عرض، يوضح توزيع المساحات التفاعلية ونقاط الاستقبال قبل مرحلة التنفيذ الإنشائي الفعلي.",
+      en: "Comprehensive 3D engineering concept design for an exhibition pavilion, illustrating the layout of interactive zones and reception points prior to actual construction execution."
+    },
+    profilePdfUrl: "#",
+    externalWebsiteUrl: "#"
+  },
+  {
+    title: {
       ar: "جناح \"صُنع في السعودية\"",
       en: "\"Saudi Made\" Pavilion"
     },

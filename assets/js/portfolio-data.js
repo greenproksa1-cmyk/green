@@ -85,61 +85,6 @@ const portfolioData = [
     "externalWebsiteUrl": "#"
   },
   {
-    "id": 4,
-    "title": {
-      "ar": "تصميم ثلاثي الأبعاد لجناح \"ضمان\"",
-      "en": "\"Daman\" Pavilion — 3D Concept Design"
-    },
-    "client": {
-      "ar": "ضمان",
-      "en": "Daman"
-    },
-    "category": {
-      "ar": "تصميم وهندسة",
-      "en": "Design & Engineering"
-    },
-    "categoryKey": "design",
-    "year": "2025",
-    "coverImage": "assets/images/portfolio/daman-3d-design.jpg",
-    "gallery": [
-      "assets/images/portfolio/daman-3d-design.jpg"
-    ],
-    "description": {
-      "ar": "تصميم هندسي ثلاثي الأبعاد متكامل لجناح عرض، يوضح توزيع المساحات التفاعلية ونقاط الاستقبال قبل مرحلة التنفيذ الإنشائي الفعلي.",
-      "en": "Comprehensive 3D engineering concept design for an exhibition pavilion, illustrating the layout of interactive zones and reception points prior to actual construction execution."
-    },
-    "profilePdfUrl": "#",
-    "externalWebsiteUrl": "#"
-  },
-  {
-    "id": 5,
-    "title": {
-      "ar": "جناح \"صُنع في السعودية\"",
-      "en": "\"Saudi Made\" Pavilion"
-    },
-    "client": {
-      "ar": "صُنع في السعودية",
-      "en": "Saudi Made"
-    },
-    "category": {
-      "ar": "معارض",
-      "en": "Exhibitions"
-    },
-    "categoryKey": "exhibition",
-    "year": "2025",
-    "coverImage": "assets/images/portfolio/saudimade-entrance.jpg",
-    "gallery": [
-      "assets/images/portfolio/saudimade-entrance.jpg",
-      "assets/images/portfolio/saudimade-interior.png"
-    ],
-    "description": {
-      "ar": "تنفيذ هندسي وإنشائي كامل لجناح ضخم بهوية بصرية خضراء مميزة، شمل بوابات دخول مضيئة، وتقسيم داخلي ذكي لعرض عشرات العلامات التجارية المحلية.",
-      "en": "Complete engineering and construction execution of a large-scale pavilion with a distinctive green visual identity, including illuminated entrance gates and smart internal zoning to showcase dozens of local brands."
-    },
-    "profilePdfUrl": "#",
-    "externalWebsiteUrl": "#"
-  },
-  {
     "id": 6,
     "title": {
       "ar": "جناح عارض ضمن معرض صناعي متخصص",
@@ -288,24 +233,6 @@ const portfolioData = [
     "coverImage": "assets/images/portfolio/7.jpeg",
     "gallery": [
       "assets/images/portfolio/7.jpeg"
-    ],
-    "profilePdfUrl": "#",
-    "externalWebsiteUrl": "#"
-  },
-  {
-    "id": 14,
-    "title": {
-      "ar": "لقطة من أعمالنا",
-      "en": "From Our Portfolio"
-    },
-    "category": {
-      "ar": "تصميم وهندسة",
-      "en": "Design & Engineering"
-    },
-    "categoryKey": "design",
-    "coverImage": "assets/images/portfolio/8.jpeg",
-    "gallery": [
-      "assets/images/portfolio/8.jpeg"
     ],
     "profilePdfUrl": "#",
     "externalWebsiteUrl": "#"
