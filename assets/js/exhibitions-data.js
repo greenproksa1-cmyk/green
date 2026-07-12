@@ -23,8 +23,8 @@ const exhibitionsArchive = [
       en: "Tabuk International Construction Expo — ASTRA Pavilion"
     },
     organizer: {
-      ar: "مجموعة أسترا الصناعية / أسمنت المنطقة الجنوبية",
-      en: "ASTRA Industrial Group / Southern Province Cement Co."
+      // ar: "مجموعة أسترا الصناعية / أسمنت المنطقة الجنوبية",
+      // en: "ASTRA Industrial Group / Southern Province Cement Co."
     },
     year: "2025",
     location: {

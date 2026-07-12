@@ -397,8 +397,8 @@ const portfolioData = [
       "en": "NEOM International Construction Exhibition"
     },
     "client": {
-      "ar": "جناح شركة اسمنت المدينة",
-      "en": "City Cement Company Pavilion"
+      //"ar": "جناح شركة اسمنت المدينة",
+      // "en": "City Cement Company Pavilion"
     },
     "category": {
       "ar": "مؤتمرات",
