@@ -34,8 +34,8 @@ const portfolioData = [
   },
   {
     title: {
-      ar: "منصة شركة أسمنت المنطقة الجنوبية",
-      en: "Saudi Cement Southern Region Company Booth"
+      //ar: "منصة شركة أسمنت المنطقة الجنوبية",
+      // en: "Saudi Cement Southern Region Company Booth"
     },
     client: {
       ar: "شركة أسمنت المنطقة الجنوبية",
@@ -61,8 +61,8 @@ const portfolioData = [
       en: "AWAYIL Urban Development Conference Management"
     },
     client: {
-      ar: "AWAYIL",
-      en: "AWAYIL"
+      // ar: "AWAYIL",
+      //en: "AWAYIL"
     },
     category: { ar: "مؤتمرات", en: "Conferences" },
     categoryKey: "conference",
@@ -131,8 +131,8 @@ const portfolioData = [
       en: "Exhibitor Booth at a Specialized Industrial Exhibition"
     },
     client: {
-      ar: "عارض صناعي",
-      en: "Industrial Exhibitor"
+      //ar: "عارض صناعي",
+      // en: "Industrial Exhibitor"
     },
     category: { ar: "معارض", en: "Exhibitions" },
     categoryKey: "exhibition",
