@@ -33,8 +33,8 @@ const exhibitionsArchive = [
     },
     coverImage: "assets/images/portfolio/astra-tabuk-newsclip.jpg",
     description: {
-      ar: "تنفيذ جناح عرض مخصص لمجموعة أسترا الصناعية وأسمنت المنطقة الجنوبية، يجمع بين الهوية المؤسسية الراقية وتقنيات العرض الحديثة. شمل التنفيذ الإنشائي الكامل وتجهيزات الاستقبال التفاعلية لاستعراض منتجات الشركة أمام الزوار والمستثمرين.",
-      en: "Full execution of a bespoke exhibition booth for ASTRA Industrial Group & Southern Province Cement Co. at the Tabuk International Construction & Development Expo. The project covered complete structural build-out and interactive visitor reception zones."
+      // ar: "تنفيذ جناح عرض مخصص لمجموعة أسترا الصناعية وأسمنت المنطقة الجنوبية، يجمع بين الهوية المؤسسية الراقية وتقنيات العرض الحديثة. شمل التنفيذ الإنشائي الكامل وتجهيزات الاستقبال التفاعلية لاستعراض منتجات الشركة أمام الزوار والمستثمرين.",
+      // en: "Full execution of a bespoke exhibition booth for ASTRA Industrial Group & Southern Province Cement Co. at the Tabuk International Construction & Development Expo. The project covered complete structural build-out and interactive visitor reception zones."
     },
     websiteUrl: "",           // اتركه "" إن لم يكن متوفراً — Leave empty if not available
     profilePdfUrl: ""         // اتركه "" إن لم يكن متوفراً — Leave empty if not available
@@ -56,8 +56,8 @@ const exhibitionsArchive = [
     },
     coverImage: "assets/images/portfolio/saudimade-entrance.jpg",
     description: {
-      ar: "تنفيذ هندسي وإنشائي كامل لجناح ضخم بهوية بصرية خضراء مميزة، شمل بوابات دخول مضيئة وتقسيم داخلي ذكي لعرض عشرات العلامات التجارية المحلية ضمن مبادرة دعم المنتج الوطني.",
-      en: "Complete engineering and construction execution of a large-scale pavilion with a distinctive green identity, featuring illuminated entry gates and smart internal zoning to showcase dozens of local Saudi brands under the national product support initiative."
+      // ar: "تنفيذ هندسي وإنشائي كامل لجناح ضخم بهوية بصرية خضراء مميزة، شمل بوابات دخول مضيئة وتقسيم داخلي ذكي لعرض عشرات العلامات التجارية المحلية ضمن مبادرة دعم المنتج الوطني.",
+      // en: "Complete engineering and construction execution of a large-scale pavilion with a distinctive green identity, featuring illuminated entry gates and smart internal zoning to showcase dozens of local Saudi brands under the national product support initiative."
     },
     websiteUrl: "",           // اتركه "" إن لم يكن متوفراً — Leave empty if not available
     profilePdfUrl: ""         // اتركه "" إن لم يكن متوفراً — Leave empty if not available

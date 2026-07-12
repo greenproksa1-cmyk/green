@@ -51,8 +51,8 @@ const portfolioData = [
       "assets/images/portfolio/cement-company-booth.jpg"
     ],
     "description": {
-      "ar": "تصميم وتنفيذ منصة استقبال وجلسات أعمال (Lounge) ضمن فعالية صناعية كبرى، بهوية بصرية مؤسسية وتجهيزات راحة متكاملة للزوار والشركاء.",
-      "en": "Design and execution of a corporate lounge and meeting area within a major industrial event, featuring institutional branding and complete visitor comfort setups."
+      // "ar": "تصميم وتنفيذ منصة استقبال وجلسات أعمال (Lounge) ضمن فعالية صناعية كبرى، بهوية بصرية مؤسسية وتجهيزات راحة متكاملة للزوار والشركاء.",
+      // "en": "Design and execution of a corporate lounge and meeting area within a major industrial event, featuring institutional branding and complete visitor comfort setups."
     },
     "profilePdfUrl": "#",
     "externalWebsiteUrl": "#"
@@ -78,8 +78,8 @@ const portfolioData = [
       "assets/images/portfolio/awayil-conference.jpg"
     ],
     "description": {
-      "ar": "إدارة ميدانية كاملة لمنصة العرض الرئيسية لمؤتمر تطوير عمراني، شملت إدارة الجلسات الحوارية، أنظمة العرض المرئي بشاشات LED عملاقة، وتنسيق جلوس الحضور.",
-      "en": "Full on-site management of the main presentation stage for an urban development conference, including panel session management, giant LED visual display systems, and audience seating coordination."
+      //"ar": "إدارة ميدانية كاملة لمنصة العرض الرئيسية لمؤتمر تطوير عمراني، شملت إدارة الجلسات الحوارية، أنظمة العرض المرئي بشاشات LED عملاقة، وتنسيق جلوس الحضور.",
+      //"en": "Full on-site management of the main presentation stage for an urban development conference, including panel session management, giant LED visual display systems, and audience seating coordination."
     },
     "profilePdfUrl": "#",
     "externalWebsiteUrl": "#"
@@ -105,8 +105,8 @@ const portfolioData = [
       "assets/images/portfolio/industrial-booth.jpg"
     ],
     "description": {
-      "ar": "تصميم وتنفيذ جناح عرض بإضاءة خطية مبتكرة وتجهيزات تفاعلية، ضمن معرض صناعي متخصص استقطب عدداً كبيراً من الزوار والمتخصصين.",
-      "en": "Design and execution of an exhibition booth with innovative linear lighting and interactive setups, within a specialized industrial exhibition that attracted a large number of visitors and specialists."
+      // "ar": "تصميم وتنفيذ جناح عرض بإضاءة خطية مبتكرة وتجهيزات تفاعلية، ضمن معرض صناعي متخصص استقطب عدداً كبيراً من الزوار والمتخصصين.",
+      //"en": "Design and execution of an exhibition booth with innovative linear lighting and interactive setups, within a specialized industrial exhibition that attracted a large number of visitors and specialists."
     },
     "profilePdfUrl": "#",
     "externalWebsiteUrl": "#"
