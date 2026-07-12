@@ -10,8 +10,8 @@ const portfolioData = [
       "en": "Industrial Exporters Association Pavilion"
     },
     "client": {
-      "ar": "جمعية المصدرين الصناعيين",
-      "en": "Industrial Exporters Association"
+      // "ar": "جمعية المصدرين الصناعيين",
+      // "en": "Industrial Exporters Association"
     },
     "category": {
       "ar": "معارض",

@@ -69,8 +69,8 @@ const exhibitionsArchive = [
       en: "Industrial Exporters Association Pavilion"
     },
     organizer: {
-      ar: "جمعية المصدرين الصناعيين",
-      en: "Industrial Exporters Association"
+      //  ar: "جمعية المصدرين الصناعيين",
+      // en: "Industrial Exporters Association"
     },
     year: "2025",
     location: {
