@@ -79,8 +79,8 @@ const exhibitionsArchive = [
     },
     coverImage: "assets/images/portfolio/exporters-association.jpg",
     description: {
-      ar: "تصميم وتنفيذ جناح عرض متكامل يعكس الهوية البصرية للجمعية ضمن معرض اقتصادي متخصص، شمل التنفيذ الإنشائي والتجهيزات التفاعلية لاستقبال الزوار وعرض خدمات دعم الصادرات الوطنية.",
-      en: "Full design and execution of an exhibition pavilion reflecting the association's visual identity within a specialized economic exhibition, including structural build-out and interactive visitor setups showcasing national export support services."
+      ar:
+        en:
     },
     websiteUrl: "",           // اتركه "" إن لم يكن متوفراً — Leave empty if not available
     profilePdfUrl: ""         // اتركه "" إن لم يكن متوفراً — Leave empty if not available
