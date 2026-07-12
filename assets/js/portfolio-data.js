@@ -352,8 +352,8 @@ const portfolioData = [
       "en": "ASTRA Pavilion (Tabuk Expo)"
     },
     "client": {
-      "ar": "مجموعة أسترا الصناعية / أسمنت الجنوبية",
-      "en": "ASTRA Group / Southern Cement"
+      //"ar": "مجموعة أسترا الصناعية / أسمنت الجنوبية",
+      //"en": "ASTRA Group / Southern Cement"
     },
     "category": {
       "ar": "معارض",
@@ -366,8 +366,8 @@ const portfolioData = [
       "assets/images/portfolio/astra-tabuk-newsclip.jpg"
     ],
     "description": {
-      "ar": "تنفيذ جناح عرض مخصص لمجموعة أسترا الصناعية وأسمنت المنطقة الجنوبية في معرض تبوك الدولي للبناء والتطوير.",
-      "en": "Execution of the custom exhibition booth representing ASTRA Group & Southern Province Cement Co. at Tabuk International Construction & Development Expo."
+      // "ar": "تنفيذ جناح عرض مخصص لمجموعة أسترا الصناعية وأسمنت المنطقة الجنوبية في معرض تبوك الدولي للبناء والتطوير.",
+      // "en": "Execution of the custom exhibition booth representing ASTRA Group & Southern Province Cement Co. at Tabuk International Construction & Development Expo."
     },
     "profilePdfUrl": "#",
     "externalWebsiteUrl": "#"
