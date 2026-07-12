@@ -34,12 +34,12 @@ const portfolioData = [
   },
   {
     title: {
-      //ar: "منصة شركة أسمنت المنطقة الجنوبية",
-      // en: "Saudi Cement Southern Region Company Booth"
+      ar: "منصة شركة أسمنت المنطقة الجنوبية",
+      en: "Saudi Cement Southern Region Company Booth"
     },
     client: {
-      ar: "شركة أسمنت المنطقة الجنوبية",
-      en: "Saudi Cement Southern Region Company"
+      // ar: "شركة أسمنت المنطقة الجنوبية",
+      //en: "Saudi Cement Southern Region Company"
     },
     category: { ar: "معارض", en: "Exhibitions" },
     categoryKey: "exhibition",
