@@ -32,6 +32,14 @@
   <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="assets/images/logo.png">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Preload first portfolio images for instant display on mobile -->
+  <link rel="preload" as="image" href="assets/images/portfolio/exporters-association.jpg">
+  <link rel="preload" as="image" href="assets/images/portfolio/cement-company-booth.jpg">
+  <link rel="preload" as="image" href="assets/images/portfolio/awayil-conference.jpg">
+  <link rel="preload" as="image" href="assets/images/portfolio/industrial-booth.jpg">
+  <link rel="preload" as="image" href="assets/images/portfolio/1.jpeg">
+  <link rel="preload" as="image" href="assets/images/portfolio/2.jpeg">
 </head>
 
 <body class="lang-ar">
@@ -1177,8 +1185,8 @@
   </button>
 
   <!-- JavaScript Scripts (portfolioData then main app logic) -->
-  <script src="assets/js/portfolio-data.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/portfolio-data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       card.innerHTML = `
         <div class="portfolio-img-wrapper">
-          <img src="${proj.coverImage}" alt="${title}" ${idx >= 3 ? 'loading="lazy"' : 'loading="eager"'}>
+          <img src="${proj.coverImage}" alt="${title}" loading="eager" decoding="async">
           <div class="portfolio-overlay">
             <span class="portfolio-category">${category}</span>
             <h3 class="portfolio-title">${title}</h3>
@@ -538,8 +538,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Initialize Portfolio render
-  renderPortfolio('all');
+  // Initialize Portfolio render — with safe retry if portfolioData not yet available
+  function initPortfolio() {
+    if (window.portfolioData && window.portfolioData.length > 0) {
+      renderPortfolio('all');
+    } else {
+      // Retry every 100ms until data is available (handles slow mobile script parsing)
+      let retries = 0;
+      const retryInterval = setInterval(() => {
+        retries++;
+        if (window.portfolioData && window.portfolioData.length > 0) {
+          clearInterval(retryInterval);
+          renderPortfolio('all');
+        } else if (retries > 50) {
+          // Give up after 5 seconds
+          clearInterval(retryInterval);
+        }
+      }, 100);
+    }
+  }
+  initPortfolio();
 
   // --- Contact Form Submission & Feedback ---
   const contactForm = document.querySelector('.contact-form');
